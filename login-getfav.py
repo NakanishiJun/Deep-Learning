@@ -19,7 +19,7 @@ login_info = {
 	"mml_id" : "0"
 }
 
-url_login = "http://uta.pw/sakusibbs/users.php?action=login&m=try"
+url_login = "https://uta.pw/sakusibbs/users.php?action=login&m=try"
 res = session.post(url_login, data=login_info)
 res.raise_for_status() #エラーならここで例外を発生させる
 
