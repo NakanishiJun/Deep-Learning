@@ -1,11 +1,11 @@
 # -*- coding:utf-8 -*-
-
+import io
 import urllib
 from bs4 import BeautifulSoup
 import os, time
 
 #リンクを抽出する
-html = open("eki-lik.html", encoding="utf-8").read()
+html = io.open("eki-link.html", encoding="utf-8").read()
 soup = BeautifulSoup(html, "html.parser")
 links = soup.select("a[href]")
 result = []
