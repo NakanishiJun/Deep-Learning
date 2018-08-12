@@ -1,9 +1,9 @@
 # -*- coding:utf-8 -*-
 
 from bs4 import BeautifulSoup
-from urllib.request import *
-from urllib.parse import *
+import urllib
 from os import makedirs
+import urlparse
 import os.path, time, re
 
 #処理済み判断変数
@@ -24,7 +24,7 @@ def enum_links(html, base):
 
 #ファイルをダウンロードし、保存する関数
 def download_file(url):
-	o = urlparse(url)
+	o = urllib.parse(url)
 	savepath = "./" + o.netloc + o.path
 	if re.search(r"/$", savepath):
 		savepath += "index.html"
